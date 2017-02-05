@@ -37,6 +37,13 @@ function vsin(n){
     }
 }
 
+function drawSine(ctx, sinf, y, color){
+    ctx.fillStyle = color;
+    for(var i = 0; i < 360; i+=0.05){
+        ctx.fillRect(i * 10,y-sinf(i) * 10, 2,2);
+    }
+}
+
 function main(){
     var canvas = document.getElementById("canvas");
     canvas.width = 400;
@@ -51,17 +58,10 @@ function main(){
         "#0077ff",
         "#ff00ff"
     ];
-}
 
-function drawSine(sinf, y, color){
-    ctx.fillStyle = color;
-    for(var i = 0; i < 360; i+=0.05){
-        ctx.fillRect(i * 10,y-sinf(i) * 10, 2,2);
+    drawSine(canvas, Math.sin, 10, "#000000");
+
+    for(i = 0; i < 30; i++){
+        drawSine(canvas, vsin(i), 20 + i * 10, colors[i % colors.length]);
     }
-}
-
-drawSine(Math.sin, 10, "#000000");
-
-for(i = 0; i < 30; i++){
-    drawSine(vsin(i), 20 + i * 10, colors[i % colors.length]);
 }
