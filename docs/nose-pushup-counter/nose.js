@@ -37,6 +37,8 @@ function vsin(n){
     }
 }
 
+
+var canvas = document.getElementById("canvas");
 canvas.width = 400;
 canvas.height = 400;
 var ctx = canvas.getContext("2d");
