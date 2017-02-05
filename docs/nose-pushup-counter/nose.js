@@ -59,9 +59,9 @@ function main(){
         "#ff00ff"
     ];
 
-    drawSine(canvas, Math.sin, 10, "#000000");
+    drawSine(ctx, Math.sin, 10, "#000000");
 
     for(i = 0; i < 30; i++){
-        drawSine(canvas, vsin(i), 20 + i * 10, colors[i % colors.length]);
+        drawSine(ctx, vsin(i), 20 + i * 10, colors[i % colors.length]);
     }
 }
