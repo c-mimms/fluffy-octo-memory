@@ -37,20 +37,21 @@ function vsin(n){
     }
 }
 
-
-var canvas = document.getElementById("canvas");
-canvas.width = 400;
-canvas.height = 400;
-var ctx = canvas.getContext("2d");
-var i;
-var colors = [
-	"#ff0000",
-    "#007700",
-    "#0000ff",
-    "#ff7700",
-    "#0077ff",
-    "#ff00ff"
-];
+function main(){
+    var canvas = document.getElementById("canvas");
+    canvas.width = 400;
+    canvas.height = 400;
+    var ctx = canvas.getContext("2d");
+    var i;
+    var colors = [
+        "#ff0000",
+        "#007700",
+        "#0000ff",
+        "#ff7700",
+        "#0077ff",
+        "#ff00ff"
+    ];
+}
 
 function drawSine(sinf, y, color){
     ctx.fillStyle = color;
