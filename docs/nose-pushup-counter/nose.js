@@ -19,6 +19,10 @@ function deg_to_rad(x){
     return x * 3.1415926 / 180;
 }
 
+function fadeToBlack(){
+    //This does nothing yet
+}
+
 function vsin(n){
     return function(x){
         var total = x,
@@ -50,18 +54,7 @@ function main(){
     canvas.height = 400;
     var ctx = canvas.getContext("2d");
     var i;
-    var colors = [
-        "#ff0000",
-        "#007700",
-        "#0000ff",
-        "#ff7700",
-        "#0077ff",
-        "#ff00ff"
-    ];
-
-    drawSine(ctx, Math.sin, 10, "#000000");
-
-    for(i = 0; i < 30; i++){
-        drawSine(ctx, vsin(i), 20 + i * 10, colors[i % colors.length]);
-    }
+    ctx.font = "60px Arial";
+    ctx.fillText("Hello World",200,200);
+    fadeToBlack();
 }
