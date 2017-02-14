@@ -1,3 +1,14 @@
-canvas{
-    border:100px solid black;
+p{
+    color: #111;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 275px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 1;
+    text-align: center;
+    user-select: none;
+    vertical-align: middle;
+}
+body{
+    background: #ffffff;
 }
